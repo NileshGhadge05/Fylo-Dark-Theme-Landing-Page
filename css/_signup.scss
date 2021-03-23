@@ -1,0 +1,63 @@
+.signup {
+  position: absolute;
+  background: transparent;
+  width: 100%;
+  transform: translateY(-248px);
+
+  @include breakpoint(small) {
+    padding: 0px 0px 160px 0px;
+  }
+
+  &__block {
+    //border: 1px solid red;
+    border-radius: $border-radius;
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2);
+    background-color: $intro-mail-bg;
+    padding: 45px 30px 45px 30px;
+    margin: 0px auto;
+    text-align: center;
+
+    @include breakpoint(medium) {
+      padding: 45px 60px 45px 60px;
+    }
+
+    @include breakpoint(large) {
+      padding: 45px 80px 45px 80px;
+    }
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-top: 35px;
+
+    @include breakpoint(medium) {
+      grid-template-columns: 1fr 200px;
+      gap: 30px;
+      margin-top: 40px;
+    }
+  }
+
+  input[type="email"] {
+    height: 56px;
+    color: $black;
+    border:none;
+    border-radius: 30px;
+    transition: box-shadow 300ms ease-in-out; 
+
+    &:focus {
+      outline: none;
+      border: 2px solid $cta2;
+    }
+  }
+
+  input[type="submit"] {
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+}

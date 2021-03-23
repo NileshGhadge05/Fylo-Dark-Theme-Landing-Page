@@ -1,0 +1,49 @@
+button, .button {
+  position: relative;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(to right, $cta1, $cta2);
+  font-size: 0.7em;
+  font-weight: bold;
+  padding: 20px 40px;
+  width: 100%;
+  max-width: 265px;
+  z-index: 1;
+  transition: box-shadow 300ms ease-in-out;
+
+  &:focus {
+    outline: none;
+  }
+
+  @include breakpoint(medium) {
+    max-width: 265px;
+  }
+
+  &:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: opacity .3s ease-in-out;
+    opacity: 0;
+  }
+
+  &:hover:before {
+    background: linear-gradient(to right, $cta2, $cta1);
+    color: $white;
+    border-radius: 30px;
+    opacity: 1;
+  }
+
+  &--large {
+    @extend .button;
+    padding: 20px;
+
+    @include breakpoint(medium) {
+      max-width: 250px;
+    }
+  }
+}
