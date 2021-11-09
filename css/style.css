@@ -555,7 +555,7 @@ button--large, .button--large {
 }
 
 .footer a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .footer .container, .footer .container--small {
